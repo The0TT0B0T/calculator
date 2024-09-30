@@ -1,22 +1,60 @@
-*{
-    background-color: aqua;
+* {
+    background-color: #B0D7FF;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 2px solid red; */
 }
- 
-.container { 
+h1 {
+    text-align: center;
+}
+.container {
     display: flex;
-    background-color: gray;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
 }
+.calculator {
+    background-color: black;
+    border: 3px black;
+    border-radius: 10px;
+    height: 300px;
+}
+
 .display {
-    background-color: grey;
-    height: 100px;
-    width: 305px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    background-color: #A9CBB7;
+    width: 250px;
+    height: 50px;
+    border: 2px inset black;
+    border-radius: 5px;
+    text-align: right;
+    font-size: 30px;
+    margin: 20px 15px 20px 25px;
+    padding: 10px 5px 5px 5px;
 }
-
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 10px; /* Space between buttons */
+    justify-items: center;
+    align-items: center;
+    background-color: black; /* Ensure background is black */
+    padding: 10px;
+    border-radius: 5px;}
 .btn {
-
+    background-color: #374B4A;
+    font-size: 16px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+.btn.zero {
+    grid-column: span 2; /* Make the "0" button span 2 columns */
+    width: 100%; /* Ensure the button spans full width */
+}
+.operands {
+    background-color: #f2934C;
+}
+.special {
+    background-color: #526760;
 }
